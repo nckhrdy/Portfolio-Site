@@ -1,0 +1,180 @@
+/* The rest of your SCSS code */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #8e8e93;
+}
+
+a {
+  color: #007aff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background-color: #ffffff;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+header .container nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+header .container nav ul li {
+  margin-left: 2rem;
+}
+header .container nav ul li:first-child {
+  margin-left: 0;
+}
+header .container nav ul li a {
+  font-size: 1.2rem;
+}
+
+main {
+  padding: 3rem 0;
+}
+main section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+main section .container h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+main section .container img {
+  max-width: 100%;
+  height: auto;
+}
+main section .container p {
+  margin-bottom: 1rem;
+}
+main section .container form {
+  display: flex;
+  flex-direction: column;
+}
+main section .container form label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+main section .container form input, main section .container form textarea {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 1rem;
+}
+main section .container form button[type=submit] {
+  background-color: #007aff;
+  color: #ffffff;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+main section #projects {
+  background-color: #f2f2f7;
+  padding: 4rem 0;
+}
+main section #projects .project {
+  margin-bottom: 4rem;
+}
+main section #projects .project h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+main section #projects .project p {
+  margin-bottom: 2rem;
+}
+main section #projects .project a {
+  font-size: 1.2rem;
+  background-color: #007aff;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  text-transform: uppercase;
+}
+main section #about {
+  background-color: #ffffff;
+  padding: 4rem 0;
+}
+main section #about img {
+  max-width: 300px;
+  height: auto;
+  float: left;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+main section #about p {
+  margin-bottom: 2rem;
+}
+main section #contact {
+  background-color: #f8f8f8;
+  padding: 100px 0;
+}
+main section #contact .container {
+  max-width: 800px;
+}
+main section #contact .container h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+main section #contact .container form {
+  display: flex;
+  flex-direction: column;
+}
+main section #contact .container form label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+main section #contact .container form input,
+main section #contact .container form textarea {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  transition: all 0.2s ease-in-out;
+}
+main section #contact .container form input:focus,
+main section #contact .container form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #1877f2;
+}
+main section #contact .container form textarea {
+  height: 150px;
+  resize: none;
+}
+main section #contact .container form button[type=submit] {
+  padding: 10px 20px;
+  background-color: #1877f2;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+main section #contact .container form button[type=submit]:hover {
+  background-color: #0d47a1;
+}/*# sourceMappingURL=styles.css.map */
