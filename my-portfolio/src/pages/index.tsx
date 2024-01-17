@@ -3,6 +3,7 @@ import React from "react";
 import SocialLinks from "../components/SocialLinks";
 import Arrows from "../components/Arrows";
 import TextStatements from "../components/IntroText";
+import About from "../components/About";
 
 const Home: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const Home: React.FC = () => {
           <SocialLinks />
         </main>
         {/* Additional Content Sections */}
+        <About /> {/* Add the new section here */}
       </div>
     </>
   );
