@@ -14,7 +14,7 @@ const About: React.FC = () => {
       // If the scroll position is less than 300 pixels, it changes back to white (#ffffff)
       // You can adjust the '300' value to change when the color switch happens
       // Also, you can replace "#ADD8E6" and "#ffffff" with any colors you prefer
-      const newColor = scrollY > 800 ? "#B3B1A1" : "#ffffff";
+      const newColor = scrollY > 400 ? "#B3B1A1" : "#ffffff";
       setBgColor(newColor); // Update the state, and thus the background color
     };
 
@@ -32,7 +32,7 @@ const About: React.FC = () => {
       style={{
         position: "relative",
         background: bgColor,
-        transition: "background-color 0.3s",
+        transition: "background-color 2s ease-in-out",
       }}
     >
       {/* SVG as the background layer using Image component */}
