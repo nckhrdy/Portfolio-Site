@@ -21,11 +21,11 @@ const About: React.FC = () => {
         }}
       >
         <Image
-          src="/assets/Elipse1.svg" // Replace with your SVG path
+          src="/assets/Elipse1.svg"
           alt="Blury circles"
           layout="fill"
-          objectFit="fill" // Adjust as needed
-          priority // Loads image immediately
+          objectFit="fill"
+          priority
         />
       </div>
 
@@ -39,7 +39,7 @@ const About: React.FC = () => {
             className="text-3xl md:text-4xl font-normal font-poppins"
             style={{ color: "#575454" }}
           >
-            So! Who am I?
+            {"So! Who am I?"}
           </p>
         </div>
         <div className="col-start-3 col-end-7 row-start-2 row-end-6 flex justify-center items-center mt-10 mr-20">
@@ -51,13 +51,7 @@ const About: React.FC = () => {
               className="text-lg md:text-2xl lg:text-3xl font-normal font-poppins"
               style={{ color: "#575454", lineHeight: "1.6" }}
             >
-              I'm an engineer with a passion for
-              innovation. I am currently a senior at Boston University, studying
-              Computer Engineering, with a concentration in Technology
-              Innovation and interests in Machine Learning and Robotics. I have
-              past experience in software development, hardware development,
-              product marketing and sales, and strategy. I am currently looking
-              for where to spend my next chapter post-graduation.
+              {"I'm an engineer with a passion for innovation. I am currently a senior at Boston University, studying Computer Engineering, with a concentration in Technology Innovation and interests in Machine Learning and Robotics. I have past experience in software development, hardware development, product marketing and sales, and strategy. I am currently looking for where to spend my next chapter post-graduation."}
             </p>
           </div>
         </div>

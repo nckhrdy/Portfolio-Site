@@ -19,7 +19,7 @@ const Header = () => {
           {/* Update About Link */}
           <Link href="#about"><span className="p-2 cursor-pointer font-semibold font-poppins ml-5 mr-5" style={{ color: textColor }}>About</span></Link>
           {/* Other Links */}
-          <Link href="/Projects"><span className="p-2 cursor-pointer font-semibold font-poppins ml-5 mr-5" style={{ color: textColor }}>Projects</span></Link>
+          <Link href="#projects"><span className="p-2 cursor-pointer font-semibold font-poppins ml-5 mr-5" style={{ color: textColor }}>Projects</span></Link>
           <Link href="/Contact"><span className="p-2 cursor-pointer font-semibold font-poppins ml-5 mr-5" style={{ color: textColor }}>Contact</span></Link>
         </div>
       </div>

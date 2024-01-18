@@ -4,6 +4,7 @@ import SocialLinks from "../components/SocialLinks";
 import Arrows from "../components/Arrows";
 import TextStatements from "../components/IntroText";
 import About from "../components/About";
+import Projects from "../components/Projects";
 import Header from "../components/Header"; // Import the Header component
 
 const Home: React.FC = () => {
@@ -25,6 +26,9 @@ const Home: React.FC = () => {
         {/* Additional Content Sections */}
         <div id="about" className="relative min-h-screen">
           <About /> {/* About section with an ID */}
+        </div>
+        <div id="projects" className="relative min-h-screen">
+          <Projects /> {/* About section with an ID */}
         </div>
         {/* Add other sections like Projects, Contact, etc., with their respective IDs */}
       </div>
