@@ -8,7 +8,7 @@ const Projects: React.FC = () => {
       href: '/project1',
       title: 'EchoView.ai',
       description: 'Augmented Reality for the Visually Impaired',
-      imageUrl: '/assets/Vector2.svg', 
+      imageUrl: '/assets/Echo.png', 
     },
     {
       href: '/project2',
