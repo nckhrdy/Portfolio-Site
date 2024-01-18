@@ -2,37 +2,11 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 const About: React.FC = () => {
-  const [bgColor, setBgColor] = useState("#ffffff"); // Initial background color
-
-  useEffect(() => {
-    // This function will be called every time the user scrolls
-    const handleScroll = () => {
-      const scrollY = window.scrollY; // Get the current vertical position of the scroll bar
-
-      // Determine the new background color based on the scroll position
-      // Here, the color changes to #ADD8E6 (light blue) if the user has scrolled down 300 pixels or more
-      // If the scroll position is less than 300 pixels, it changes back to white (#ffffff)
-      // You can adjust the '300' value to change when the color switch happens
-      // Also, you can replace "#ADD8E6" and "#ffffff" with any colors you prefer
-      const newColor = scrollY > 400 ? "#B3B1A1" : "#ffffff";
-      setBgColor(newColor); // Update the state, and thus the background color
-    };
-
-    // Add the scroll event listener when the component mounts
-    window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []); // Empty dependency array means this effect runs once on mount and then on unmount
-
   return (
     <div
       style={{
         position: "relative",
-        background: bgColor,
-        transition: "background-color 2s ease-in-out",
+        background: "#ffffff",
       }}
     >
       {/* SVG as the background layer using Image component */}
@@ -60,27 +34,32 @@ const About: React.FC = () => {
         className="grid grid-cols-6 grid-rows-6 h-screen"
         style={{ position: "relative", zIndex: 2 }}
       >
-        <div className="col-start-1 col-end-2 row-start-1 row-end-2 flex flex-col justify-center items-center ml-20">
+        <div className="col-start-1 col-end-3 row-start-1 row-end-2 flex flex-col justify-center items-center ml-20 mt-20">
           <p
             className="text-3xl md:text-4xl font-normal font-poppins"
             style={{ color: "#575454" }}
           >
-            About Me
+            So! Who am I?
           </p>
         </div>
-        <div className="col-start-1 col-end-5 row-start-5 row-end-5 flex flex-col justify-center ml-20">
-          <p
-            className="text-3xl md:text-4xl font-normal font-poppins mb-10"
-            style={{ color: "#575454" }}
+        <div className="col-start-3 col-end-7 row-start-2 row-end-6 flex justify-center items-center mt-10 mr-20">
+          <div
+            className="bg-white bg-opacity-90 shadow-lg p-4 md:p-6 max-w-3xl w-full rounded-lg"
+            style={{ margin: "0 10%" }}
           >
-            STUFF ABOUT ME
-          </p>
-          <p
-            className="text-3xl md:text-4xl font-normal font-poppins"
-            style={{ color: "#575454" }}
-          >
-            More things
-          </p>
+            <p
+              className="text-lg md:text-2xl lg:text-3xl font-normal font-poppins"
+              style={{ color: "#575454", lineHeight: "1.6" }}
+            >
+              I'm an engineer with a passion for
+              innovation. I am currently a senior at Boston University, studying
+              Computer Engineering, with a concentration in Technology
+              Innovation and interests in Machine Learning and Robotics. I have
+              past experience in software development, hardware development,
+              product marketing and sales, and strategy. I am currently looking
+              for where to spend my next chapter post-graduation.
+            </p>
+          </div>
         </div>
       </main>
     </div>
