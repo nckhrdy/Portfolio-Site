@@ -10,7 +10,7 @@ const Header = () => {
         <div className="flex">
           {/* Logo or Brand Name */}
           <Link href="/">
-            <span className="text-xl font-semibold cursor-pointer font-poppins" style={{ color: textColor }}>Nckhrdy Portfolio</span>
+            <span className="text-xl font-semibold cursor-pointer font-poppins" style={{ color: textColor }}>Nicholas Hardy Portfolio</span>
           </Link>
         </div>
         <div className="flex">

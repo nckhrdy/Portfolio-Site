@@ -7,38 +7,38 @@ const Projects: React.FC = () => {
     {
       href: '/project1',
       title: 'EchoView.ai',
-      description: 'Augmented Reality for the Visually Impaired',
+      description: 'Augmented Reality for the Audio Impaired',
       imageUrl: '/assets/Echo.png', 
     },
     {
       href: '/project2',
       title: 'Semi-Autonomous Buggy',
       description: 'Semi-Autonomous Buggy to Navigate a Course',
-      imageUrl: '/assets/Vector2.svg', 
+      imageUrl: '/assets/Buggy.png', 
     },
     {
         href: '/project3',
         title: 'NFC Scooter Fob',
         description: 'Secure NFC Fob for Electric Scooters',
-        imageUrl: '/assets/Vector2.svg', 
+        imageUrl: '/assets/Fob.png', 
       },
       {
         href: '/project4',
         title: 'WiFi FPV Buggy',
         description: 'WiFi controlled FPV Buggy with Live Video Feed',
-        imageUrl: '/assets/Vector2.svg', 
+        imageUrl: '/assets/FPV.png', 
       },
       {
         href: '/project5',
         title: 'Sono Buoy Design Project',
         description: 'Mechanical Design of a Sono Buoy',
-        imageUrl: '/assets/Vector2.svg', 
+        imageUrl: '/assets/Sono.png', 
       },
       {
         href: '/project6',
         title: 'This website!',
         description: 'My personal portfolio website',
-        imageUrl: '/assets/Vector2.svg', 
+        imageUrl: '/assets/Website.png', 
       },
   ];
 
