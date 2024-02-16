@@ -10,17 +10,15 @@ const Header = () => {
         <div className="flex">
           {/* Logo or Brand Name */}
           <Link href="/">
-            <span className="text-xl font-semibold cursor-pointer font-poppins" style={{ color: textColor }}>Nicholas Hardy Portfolio</span>
+            <span className="text-xl font-semibold cursor-pointer" style={{ fontFamily: "'Bodoni Moda', serif", color: textColor }}>Nicholas Hardy Portfolio</span>
           </Link>
         </div>
         <div className="flex">
           {/* Navigation Links */}
-          <Link href="/"><span className="p-2 cursor-pointer font-semibold font-poppins ml-5 mr-5" style={{ color: textColor }}>Home</span></Link>
-          {/* Update About Link */}
-          <Link href="#about"><span className="p-2 cursor-pointer font-semibold font-poppins ml-5 mr-5" style={{ color: textColor }}>About</span></Link>
-          {/* Other Links */}
-          <Link href="#projects"><span className="p-2 cursor-pointer font-semibold font-poppins ml-5 mr-5" style={{ color: textColor }}>Projects</span></Link>
-          <Link href="/Contact"><span className="p-2 cursor-pointer font-semibold font-poppins ml-5 mr-5" style={{ color: textColor }}>Contact</span></Link>
+          <Link href="/"><span className="p-2 cursor-pointer font-semibold ml-5 mr-5" style={{ fontFamily: "'Bodoni Moda', serif", color: textColor }}>Home</span></Link>
+          <Link href="#about"><span className="p-2 cursor-pointer font-semibold ml-5 mr-5" style={{ fontFamily: "'Bodoni Moda', serif", color: textColor }}>About</span></Link>
+          <Link href="#projects"><span className="p-2 cursor-pointer font-semibold ml-5 mr-5" style={{ fontFamily: "'Bodoni Moda', serif", color: textColor }}>Projects</span></Link>
+          <Link href="/Contact"><span className="p-2 cursor-pointer font-semibold ml-5 mr-5" style={{ fontFamily: "'Bodoni Moda', serif", color: textColor }}>Contact</span></Link>
         </div>
       </div>
     </nav>
