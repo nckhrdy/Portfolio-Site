@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 
+
 const Project1: React.FC = () => {
   // Define the color as a constant if you will use it in multiple places
   const textColor = "#575454";
@@ -13,7 +14,7 @@ const Project1: React.FC = () => {
         <meta name="description" content="Project 1 description" />
       </Head>
       <div
-        className="pt-16 min-h-screen bg-gray-100 flex flex-col justify-center items-center" // Added pt-16 to push the content below the fixed header
+        className="min-h-screen bg-gray-100 flex flex-col justify-center items-center"
         style={{ fontFamily: "'Bodoni Moda', serif" }}
       >
         <div className="max-w-4xl mx-auto p-5">
