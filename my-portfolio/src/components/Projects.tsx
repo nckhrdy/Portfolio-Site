@@ -12,8 +12,8 @@ const Projects: React.FC = () => {
     },
     {
       href: '/Project2',
-      title: 'Semi-Autonomous Buggy',
-      description: 'Semi-Autonomous Buggy to Navigate a Course',
+      title: 'Autonomous Buggy',
+      description: 'Autonomous Buggy to Navigate a Course',
       imageUrl: '/assets/Buggy.png', 
     },
     {

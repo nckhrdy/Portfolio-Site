@@ -1,11 +1,12 @@
 import React from "react";
 import Head from "next/head";
 import Image from "next/image";
-
+import { useRouter } from 'next/router';
+import Header from "../../components/Header";
 
 const Project1: React.FC = () => {
-  // Define the color as a constant if you will use it in multiple places
   const textColor = "#575454";
+  const router = useRouter();
 
   return (
     <>
@@ -13,11 +14,20 @@ const Project1: React.FC = () => {
         <title>EchoView.ai - Project 1</title>
         <meta name="description" content="Project 1 description" />
       </Head>
+      <Header />
       <div
         className="min-h-screen bg-gray-100 flex flex-col justify-center items-center"
-        style={{ fontFamily: "'Bodoni Moda', serif" }}
+        style={{ fontFamily: "'DocumanSTC', serif", paddingTop: "100px" }} 
       >
         <div className="max-w-4xl mx-auto p-5">
+          {/* Back button */}
+          <button
+            onClick={() => router.back()}
+            className="mb-4 text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out"
+            style={{ fontFamily: "'Nunito', sans-serif" }}
+          >
+            &larr; Back
+          </button>
           <h1
             className="text-4xl font-bold text-center mb-6"
             style={{ color: textColor }}
@@ -28,7 +38,6 @@ const Project1: React.FC = () => {
             Augmented Reality for the Deaf Community
           </p>
           <div className="w-full h-64 relative mb-8">
-            {/* Replace src with your project image */}
             <Image
               src="/assets/Echo.png"
               alt="Project Image"
@@ -44,48 +53,22 @@ const Project1: React.FC = () => {
             >
               Project Overview
             </h2>
-            <p className="text-gray-600 pl-4 block">
+            <p className="text-gray-600 pl-4 block"
+              style={{ fontFamily: "'Nunito', sans-serif" }}>
               For my Senior Capstone Project, I chose to put forward a personal
               project rather than work for an existing company. This was where
               EchoView.ai was born. EchoView.ai is a pair of augmented reality
               glasses that are designed to help the deaf and hard of hearing
-              community. The glasses use dual MEM microphones to capture speech
-              that is then transcribed in real time into the user's field of
-              view.
-              <br />
-              <br />
-              <span>
-                The glasses are powered by a BCM2711 Quad core Cortex-A72 (ARM
-                v8) 64-bit SoC @ 1.8GHz with 8GB of SDRAM which runs Whisper.cpp
-                (OpenAI's Whisper model ported to C++) locally for the speech to
-                text conversion.
-              </span>
-              <br />
-              <br />
-              <span>
-                This project is still in the early stages of development, but as
-                of the time I am writing this, the glasses are able to
-                transcribe speech with 95% accuracy and with a 1s delay. The
-                output is displayed by using an optical combiner to project the
-                text onto the user's field of view.
-              </span>
-              <br />
-              <br />
-              <span>
-                Follow the project's progress on
-                <a
-                  href="https://github.com/nckhrdy/EchoView.ai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {" "}
-                  my GitHub
-                </a>
-                .
-              </span>
+              community.
+              <br /><br />
+              The glasses are designed to transcribe speech in real-time and
+              display it on the user's field of view. This is done by sending audio via Bluetooth
+              microphones on the glasses to then be transcribed by a speech-to-text API. We have also built an IOS app to work in tandem with the glasses to allow for the user to customize the text size, color, and allow them to access their conversation history.
+              <br /><br />
+              This project is still in the early stages of development as we have just finished our first prototype. We are currently working on improving the latency of the speech-to-text API and the overall design of the glasses.
+              <br /><br />
+              More updates to come soon!
             </p>
-
-            {/* Add more content about Project 1 here */}
           </div>
         </div>
       </div>

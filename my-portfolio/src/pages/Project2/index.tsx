@@ -1,35 +1,46 @@
 import React from "react";
 import Head from "next/head";
 import Image from "next/image";
+import { useRouter } from 'next/router';
+import Header from "../../components/Header";
 
-const Project1: React.FC = () => {
-  // Define the color as a constant if you will use it in multiple places
+const Project2: React.FC = () => {
   const textColor = "#575454";
+  const router = useRouter();
 
   return (
     <>
       <Head>
-        <title>EchoView.ai - Project 1</title>
-        <meta name="description" content="Project 1 description" />
+        <title>Autonomous Buggy - Project 2</title>
+        <meta name="description" content="Project 2 description" />
       </Head>
+      <Header />
+      {/* Increase paddingTop here if your header is taller */}
       <div
-        className="pt-16 min-h-screen bg-gray-100 flex flex-col justify-center items-center" // Added pt-16 to push the content below the fixed header
-        style={{ fontFamily: "'Bodoni Moda', serif" }}
+        className="pt-24 min-h-screen bg-gray-100 flex flex-col justify-center items-center"
+        style={{ fontFamily: "'DocumanSTC', serif" }}
       >
         <div className="max-w-4xl mx-auto p-5">
+          {/* Back button */}
+          <button
+            onClick={() => router.back()}
+            className="mb-4 text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out"
+            style={{ fontFamily: "'Nunito', sans-serif" }}
+          >
+            &larr; Back
+          </button>
           <h1
             className="text-4xl font-bold text-center mb-6"
             style={{ color: textColor }}
           >
-            EchoView.ai
+            Autonomous Buggy
           </h1>
           <p className="text-lg mb-4 text-center" style={{ color: textColor }}>
-            Augmented Reality for the Deaf Community
+            Autonomous Buggy for Course Navigation
           </p>
           <div className="w-full h-64 relative mb-8">
-            {/* Replace src with your project image */}
             <Image
-              src="/assets/Echo.png"
+              src="/assets/Buggy.png"
               alt="Project Image"
               layout="fill"
               objectFit="cover"
@@ -38,53 +49,144 @@ const Project1: React.FC = () => {
           </div>
           <div className="bg-white shadow-md rounded-lg p-6">
             <h2
-              className="text-2xl font-semibold mb-4"
+              className="text-2xl font-semibold text-center mb-4"
               style={{ color: textColor }}
             >
               Project Overview
             </h2>
-            <p className="text-gray-600 pl-4 block">
-              For my Senior Capstone Project, I chose to put forward a personal
-              project rather than work for an existing company. This was where
-              EchoView.ai was born. EchoView.ai is a pair of augmented reality
-              glasses that are designed to help the deaf and hard of hearing
-              community. The glasses use dual MEM microphones to capture speech
-              that is then transcribed in real time into the user's field of
-              view.
+            <div className="text-gray-600"
+            style={{ fontFamily: "'Nunito', serif" }}>
+              Collaborators: Nicholas Hardy, Marybel Boujaoude, Hassan Hijazi,
+              Riya Deokar
               <br />
               <br />
-              <span>
-                The glasses are powered by a BCM2711 Quad core Cortex-A72 (ARM
-                v8) 64-bit SoC @ 1.8GHz with 8GB of SDRAM which runs Whisper.cpp
-                (OpenAI's Whisper model ported to C++) locally for the speech to
-                text conversion.
-              </span>
+              Date: 2023-04-04
               <br />
               <br />
-              <span>
-                This project is still in the early stages of development, but as
-                of the time I am writing this, the glasses are able to
-                transcribe speech with 95% accuracy and with a 1s delay. The
-                output is displayed by using an optical combiner to project the
-                text onto the user's field of view.
-              </span>
-              <br />
-              <br />
-              <span>
-                Follow the project's progress on
-                <a
-                  href="https://github.com/nckhrdy/EchoView.ai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {" "}
-                  my GitHub
-                </a>
-                .
-              </span>
-            </p>
-
-            {/* Add more content about Project 1 here */}
+              The Autonomous Buggy project aimed to develop a self-driving
+              buggy capable of navigating a course autonomously. The project
+              involved the integration of sensors, actuators, and control
+              systems to facilitate the buggy's autonomous operation. The
+              project's primary objective was to design a system that could
+              navigate a course while avoiding obstacles and maintaining a
+              safe distance from them.
+            </div>
+            <h2
+              className="text-2xl font-semibold text-center mb-4 mt-4"
+              style={{ color: textColor }}
+            >
+              Key Features
+            </h2>
+            <ul className="text-gray-600 pl-4 list-disc"
+            style={{ fontFamily: "'Nunito', serif" }}>
+              <li>
+                Proportional, integral, differential (PID) control system for
+                precise speed and steering adjustments.
+              </li>
+              <li>
+                Combination of ultrasonic and Lidar sensors for effective
+                collision avoidance and path tracking.
+              </li>
+              <li>
+                Utilization of an optical encoder for accurate speed measurement
+                and control.
+              </li>
+              <li>
+                Advanced software architecture accommodating sensor and actuator
+                timing for reliable system performance.
+              </li>
+              <li>
+                Wireless control for start and stop commands, enhancing
+                operational flexibility.
+              </li>
+            </ul>
+            <h2
+              className="text-2xl font-semibold text-center mb-4 mt-4"
+              style={{ color: textColor }}
+            >
+              Implementation Details
+            </h2>
+            <ul className="text-gray-600 pl-4 list-disc"
+            style={{ fontFamily: "'Nunito', serif" }}>
+              <li>
+                ESP32 microcontroller chosen for its processing power and
+                wireless capabilities.
+              </li>
+              <li>
+                H-Bridge motor controller used to calibrate the ESC with a
+                Neutral value (1500) as well as the maximum and minimum values
+                (2000 and 1000).
+              </li>
+              <li>
+                Speed control was achieved by using a PID controller to adjust
+                the PWM signal sent to the ESC.
+              </li>
+              <li>
+                The Lidar sensor was used to detect obstacles and calculate the
+                distance to them to determine the steering angle and speed of
+                the buggy.
+              </li>
+              <li>
+                ESP wifi capabilities were used as a remote control to start and
+                stop the buggy via a node.js server.
+              </li>
+            </ul>
+            <h2
+              className="text-2xl font-semibold text-center mb-4 mt-4"
+              style={{ color: textColor }}
+            >
+              Supporting Artifacts
+            </h2>
+            <div className="text-gray-600"
+            style={{ fontFamily: "'Nunito', serif" }}>
+              Explore further details of our project through the following resources:
+              <br /><br />
+              <a
+                href="https://drive.google.com/file/d/1qet2Beorp1TNlXkDEIk6q_9u5V8p38tI/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "underline" }}
+              >
+                Project Architecture Video
+              </a>
+              <br /><br />
+              <a
+                href="https://github.com/nckhrdy/SelfDrivingBuggy"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "underline" }}
+              >
+                Project GitHub
+              </a>
+              <br /><br />
+              <div className="w-full h-64 relative mb-8">
+                <Image
+                  src="/assets/Proj2Arch.png"
+                  alt="Project Architecture"
+                  layout="fill"
+                  objectFit="contain"
+                  className="rounded-lg"
+                />
+              </div>
+              <div className="w-full h-64 relative mb-8">
+                <Image
+                  src="/assets/Proj2States.png"
+                  alt="Project States"
+                  layout="fill"
+                  objectFit="contain"
+                  className="rounded-lg"
+                />
+              </div>
+              <div className="w-full h-64 relative mb-8">
+                <Image
+                  src="/assets/Proj2Button.png"
+                  alt="Project Button"
+                  layout="fill"
+                  objectFit="contain"
+                  className="rounded-lg"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -92,4 +194,4 @@ const Project1: React.FC = () => {
   );
 };
 
-export default Project1;
+export default Project2;

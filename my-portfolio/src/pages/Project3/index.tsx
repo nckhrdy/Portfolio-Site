@@ -1,35 +1,46 @@
 import React from "react";
 import Head from "next/head";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import Header from "../../components/Header";
 
-const Project1: React.FC = () => {
-  // Define the color as a constant if you will use it in multiple places
+const Project3: React.FC = () => {
   const textColor = "#575454";
+  const router = useRouter();
 
   return (
     <>
       <Head>
-        <title>EchoView.ai - Project 1</title>
-        <meta name="description" content="Project 1 description" />
+        <title>NFC Scooter Fob - Project 3</title>
+        <meta name="description" content="Project 2 description" />
       </Head>
+      <Header />
+      {/* Increase paddingTop here if your header is taller */}
       <div
-        className="pt-16 min-h-screen bg-gray-100 flex flex-col justify-center items-center" // Added pt-16 to push the content below the fixed header
-        style={{ fontFamily: "'Bodoni Moda', serif" }}
+        className="pt-24 min-h-screen bg-gray-100 flex flex-col justify-center items-center"
+        style={{ fontFamily: "'DocumanSTC', serif" }}
       >
         <div className="max-w-4xl mx-auto p-5">
+          {/* Back button */}
+          <button
+            onClick={() => router.back()}
+            className="mb-4 text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out"
+            style={{ fontFamily: "'Nunito', sans-serif" }}
+          >
+            &larr; Back
+          </button>
           <h1
             className="text-4xl font-bold text-center mb-6"
             style={{ color: textColor }}
           >
-            EchoView.ai
+            NFC Scooter Fob
           </h1>
           <p className="text-lg mb-4 text-center" style={{ color: textColor }}>
-            Augmented Reality for the Deaf Community
+            Secure NFC Fob for e-Scooter Access
           </p>
           <div className="w-full h-64 relative mb-8">
-            {/* Replace src with your project image */}
             <Image
-              src="/assets/Echo.png"
+              src="/assets/Fob.png"
               alt="Project Image"
               layout="fill"
               objectFit="cover"
@@ -38,53 +49,175 @@ const Project1: React.FC = () => {
           </div>
           <div className="bg-white shadow-md rounded-lg p-6">
             <h2
-              className="text-2xl font-semibold mb-4"
+              className="text-2xl font-semibold text-center mb-4"
               style={{ color: textColor }}
             >
               Project Overview
             </h2>
-            <p className="text-gray-600 pl-4 block">
-              For my Senior Capstone Project, I chose to put forward a personal
-              project rather than work for an existing company. This was where
-              EchoView.ai was born. EchoView.ai is a pair of augmented reality
-              glasses that are designed to help the deaf and hard of hearing
-              community. The glasses use dual MEM microphones to capture speech
-              that is then transcribed in real time into the user's field of
-              view.
+            <div
+              className="text-gray-600"
+              style={{ fontFamily: "'Nunito', serif" }}
+            >
+              Collaborators: Nicholas Hardy, Marybel Boujaoude, Hassan Hijazi,
+              Riya Deokar
               <br />
               <br />
-              <span>
-                The glasses are powered by a BCM2711 Quad core Cortex-A72 (ARM
-                v8) 64-bit SoC @ 1.8GHz with 8GB of SDRAM which runs Whisper.cpp
-                (OpenAI's Whisper model ported to C++) locally for the speech to
-                text conversion.
-              </span>
+              Date: 2023-04-20
               <br />
               <br />
-              <span>
-                This project is still in the early stages of development, but as
-                of the time I am writing this, the glasses are able to
-                transcribe speech with 95% accuracy and with a 1s delay. The
-                output is displayed by using an optical combiner to project the
-                text onto the user's field of view.
-              </span>
-              <br />
-              <br />
-              <span>
-                Follow the project's progress on
-                <a
-                  href="https://github.com/nckhrdy/EchoView.ai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {" "}
-                  my GitHub
-                </a>
-                .
-              </span>
-            </p>
+              The NFC Scooter Fob project was aimed at developing a secure
+              method to access e-scooters. The project involved the integration
+              of NFC technology to facilitate secure access to e-scooters by
+              passing unique identifiers to the scooter's control system. The
+              project's primary objective was to design a system that could
+              provide secure access to e-scooters while ensuring user
+              convenience and system reliability.
+            </div>
+            <h2
+              className="text-2xl font-semibold text-center mb-4 mt-4"
+              style={{ color: textColor }}
+            >
+              Key Features
+            </h2>
+            <ul
+              className="text-gray-600 pl-4 list-disc"
+              style={{ fontFamily: "'Nunito', serif" }}
+            >
+              <li>
+                Enhanced security with NFC-enabled key fob design for
+                proximity-based e-scooter unlocking.
+              </li>
+              <li>
+                Dynamic device roles through ESP32, supporting both transmitter
+                and receiver functionalities.
+              </li>
+              <li>
+                User feedback via RGB LED indicators, signifying operational
+                states.
+              </li>
+              <li>
+                Comprehensive transaction logging for security audits, capturing
+                FIB, SID, and timestamps.
+              </li>
+              <li>
+                Detailed operational oversight with a state machine architecture
+                and visual diagrams.
+              </li>
+            </ul>
 
-            {/* Add more content about Project 1 here */}
+            <h2
+              className="text-2xl font-semibold text-center mb-4 mt-4"
+              style={{ color: textColor }}
+            >
+              Implementation Details
+            </h2>
+            <ul
+              className="text-gray-600 pl-4 list-disc"
+              style={{ fontFamily: "'Nunito', serif" }}
+            >
+              <li>
+                IR communication framework established for data payload
+                transmission between fob and scooter.
+              </li>
+              <li>
+                Seamless data integration within local networks using UDP
+                messaging protocols.
+              </li>
+              <li>
+                Server-side database development for storing transaction data,
+                complemented by a web-based query interface.
+              </li>
+              <li>
+                Advanced security implementations, including encrypted
+                communication and unique key generation per transaction.
+              </li>
+              <li>
+                Unified system integration combining Raspberry Pi camera and
+                server for QR code-based authentication.
+              </li>
+            </ul>
+
+            <h2
+              className="text-2xl font-semibold text-center mb-4 mt-4"
+              style={{ color: textColor }}
+            >
+              Supporting Artifacts
+            </h2>
+            <div
+              className="text-gray-600"
+              style={{ fontFamily: "'Nunito', serif" }}
+            >
+              Explore further details of our project through the following
+              resources:
+              <br />
+              <br />
+              <a
+                href="https://drive.google.com/file/d/1wr9SW5AOvmGvePvcKLIu-ERTd6OCRgOA/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "underline" }}
+              >
+                Project Architecture Video
+              </a>
+              <br />
+              <br />
+              <a
+                href="https://drive.google.com/file/d/167HEl0m1cnsbCQHSr_LFSs0hiYsIl1-V/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "underline" }}
+              >
+                Project Demo Video
+              </a>
+              <br />
+              <br />
+              <a
+                href="https://github.com/nckhrdy/NFCScooterFob"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "underline" }}
+              >
+                Project GitHub
+              </a>
+              <br />
+              <br />
+              <div className="w-full h-64 relative mb-8">
+                <Image
+                  src="/assets/Proj3Arch.png"
+                  alt="Project Architecture"
+                  layout="fill"
+                  objectFit="contain"
+                  className="rounded-lg"
+                />
+              </div>
+              <div className="w-full h-64 relative mb-8">
+                <Image
+                  src="/assets/Proj3Full.png"
+                  alt="Project Hardware"
+                  layout="fill"
+                  objectFit="contain"
+                  className="rounded-lg"
+                />
+              </div>
+              <div className="w-full h-64 relative mb-8">
+                <Image
+                  src="/assets/Proj3State1.png"
+                  alt="Project States"
+                  layout="fill"
+                  objectFit="contain"
+                  className="rounded-lg"
+                />
+              </div>
+              <div className="w-full h-64 relative mb-8">
+                <Image
+                  src="/assets/Proj3State2.png"
+                  alt="Project States"
+                  layout="fill"
+                  objectFit="contain"
+                  className="rounded-lg"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -92,4 +225,4 @@ const Project1: React.FC = () => {
   );
 };
 
-export default Project1;
+export default Project3;

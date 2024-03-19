@@ -1,5 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400&display=swap');
+/* Add this to your global.css */
+@font-face {
+  font-family: 'DocumanSTC';
+  src: url('/fonts/DocumanSTC-Medium.otf') format('opentype'),
+       url('/fonts/DocumanSTC-Medium.ttf') format('truetype'),
+       url('/fonts/DocumanSTC-Medium.woff') format('woff'),
+       url('/fonts/DocumanSTC-Medium.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 
+/* Thin version */
+@font-face {
+  font-family: 'DocumanSTC';
+  src: url('/fonts/DocumanSTC-Thin.otf') format('opentype'),
+       url('/fonts/DocumanSTC-Thin.ttf') format('truetype'),
+       url('/fonts/DocumanSTC-Thin.woff') format('woff'),
+       url('/fonts/DocumanSTC-Thin.woff2') format('woff2');
+  font-weight: 100; /* or the correct weight for the thin version */
+  font-style: normal;
+  font-display: swap;
+}
+/* Existing imports and Tailwind directives */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Use your custom font family wherever you need it */
+body {
+  font-family: 'DocumanSTC', 'Nunito', serif;
+}
+
+.thin-text {
+  font-family: 'DocumanSTC', sans-serif;
+  font-weight: 100;
+}
+
+.bold-text {
+  font-family: 'DocumanSTC', sans-serif;
+  font-weight: bold;
+}
