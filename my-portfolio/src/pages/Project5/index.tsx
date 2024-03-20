@@ -80,7 +80,7 @@ const Project5: React.FC = () => {
               style={{ fontFamily: "'Nunito', serif" }}
             >
               <li>
-                Detailed Design Report including stress analysis and material selection explanatino .
+                Detailed Design Report including stress analysis and material selection explanation.
               </li>
               <li>
                 Checkpoint time and distance logging via a Raspberry Pi-hosted
