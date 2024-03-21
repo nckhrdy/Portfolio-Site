@@ -11,12 +11,8 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const makeHref = (section: string) => {
-    return router.pathname === '/' ? section : `/${section}`;
-  };
-
   return (
-    <nav className="p-4 fixed top-0 left-0 right-0 z-50 bg-white">
+    <nav className="p-4 fixed top-0 left-0 right-0 z-50 bg-white w-full">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/">
           <span className="text-xl font-semibold cursor-pointer" style={{ fontFamily: "'DocumanSTC', serif", color: textColor }}>Nicholas Hardy Portfolio</span>
@@ -24,17 +20,23 @@ const Header = () => {
         {/* Hamburger Icon */}
         <div className="md:hidden">
           <button onClick={toggleMenu}>
-            <svg className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M3 5h14a1 1 0 011 1v1a1 1 0 11-2 0V6H4v1a1 1 0 11-2 0V6a1 1 0 011-1zm0 5h14a1 1 0 011 1v1a1 1 0 11-2 0v-1H4v1a1 1 0 11-2 0v-1a1 1 0 011-1zm0 5h14a1 1 0 011 1v1a1 1 0 11-2 0v-1H4v1a1 1 0 11-2 0v-1a1 1 0 011-1z" clipRule="evenodd" />
+            <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>
           </button>
         </div>
-        {/* Navigation Links */}
-        <div className={`flex flex-col md:flex-row ${isMenuOpen ? "block" : "hidden"} md:block`}>
-          <Link href="/"><span className="p-2 cursor-pointer font-semibold" style={{ fontFamily: "'DocumanSTC', serif", color: textColor }}>Home</span></Link>
-          <Link href={makeHref("#about")}><span className="p-2 cursor-pointer font-semibold" style={{ fontFamily: "'DocumanSTC', serif", color: textColor }}>About</span></Link>
-          <Link href={makeHref("#projects")}><span className="p-2 cursor-pointer font-semibold" style={{ fontFamily: "'DocumanSTC', serif", color: textColor }}>Projects</span></Link>
-          <Link href={makeHref("#contact")}><span className="p-2 cursor-pointer font-semibold" style={{ fontFamily: "'DocumanSTC', serif", color: textColor }}>Contact</span></Link>
+        {/* Fullscreen Menu Overlay */}
+        <div className={`${isMenuOpen ? "fixed inset-0 bg-white bg-opacity-95 z-50 flex flex-col items-center justify-center" : "hidden"} md:flex md:flex-row md:relative md:bg-transparent md:items-center md:justify-between`}>
+          <button className="absolute top-5 right-5 md:hidden" onClick={toggleMenu}>
+            <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+          {['/', '#about', '#projects', '#contact'].map((path, index) => (
+            <Link key={index} href={path} className="p-4 cursor-pointer font-semibold text-lg" style={{ fontFamily: "'DocumanSTC', serif", color: textColor }} onClick={toggleMenu}>
+              {path === '/' ? 'Home' : path.substring(1).charAt(0).toUpperCase() + path.substring(2)}
+            </Link>
+          ))}
         </div>
       </div>
     </nav>
