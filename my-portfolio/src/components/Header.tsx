@@ -6,7 +6,7 @@ const Header = () => {
   const textColor = '#575454';
   const router = useRouter();
 
-  const makeHref = (section) => {
+  const makeHref = (section: string) => { // Fixed type here
     // If not on the home page, return the root path with the hash, otherwise just the hash
     return router.pathname === '/' ? section : `/${section}`;
   };

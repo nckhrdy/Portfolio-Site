@@ -62,7 +62,7 @@ const Project1: React.FC = () => {
               community.
               <br /><br />
               The glasses are designed to transcribe speech in real-time and
-              display it on the user's field of view. This is done by sending audio via Bluetooth
+              display it on the user&apos;s field of view. This is done by sending audio via Bluetooth
               microphones on the glasses to then be transcribed by a speech-to-text API. We have also built an IOS app to work in tandem with the glasses to allow for the user to customize the text size, color, and allow them to access their conversation history.
               <br /><br />
               This project is still in the early stages of development as we have just finished our first prototype. We are currently working on improving the latency of the speech-to-text API and the overall design of the glasses.

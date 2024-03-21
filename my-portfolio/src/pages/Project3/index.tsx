@@ -12,7 +12,7 @@ const Project3: React.FC = () => {
     <>
       <Head>
         <title>NFC Scooter Fob - Project 3</title>
-        <meta name="description" content="Project 2 description" />
+        <meta name="description" content="Project 3 description" />
       </Head>
       <Header />
       {/* Increase paddingTop here if your header is taller */}
@@ -68,8 +68,8 @@ const Project3: React.FC = () => {
               The NFC Scooter Fob project was aimed at developing a secure
               method to access e-scooters. The project involved the integration
               of NFC technology to facilitate secure access to e-scooters by
-              passing unique identifiers to the scooter's control system. The
-              project's primary objective was to design a system that could
+              passing unique identifiers to the scooter&apos;s control system. The
+              project&apos;s primary objective was to design a system that could
               provide secure access to e-scooters while ensuring user
               convenience and system reliability.
             </div>
@@ -97,7 +97,7 @@ const Project3: React.FC = () => {
               </li>
               <li>
                 Comprehensive transaction logging for security audits, capturing
-                FIB, SID, and timestamps.
+                FID, SID, and timestamps.
               </li>
               <li>
                 Detailed operational oversight with a state machine architecture
@@ -149,8 +149,7 @@ const Project3: React.FC = () => {
             >
               Explore further details of our project through the following
               resources:
-              <br />
-              <br />
+              <br /><br />
               <a
                 href="https://drive.google.com/file/d/1wr9SW5AOvmGvePvcKLIu-ERTd6OCRgOA/view"
                 target="_blank"
@@ -159,8 +158,7 @@ const Project3: React.FC = () => {
               >
                 Project Architecture Video
               </a>
-              <br />
-              <br />
+              <br /><br />
               <a
                 href="https://drive.google.com/file/d/167HEl0m1cnsbCQHSr_LFSs0hiYsIl1-V/view"
                 target="_blank"
@@ -169,8 +167,7 @@ const Project3: React.FC = () => {
               >
                 Project Demo Video
               </a>
-              <br />
-              <br />
+              <br /><br />
               <a
                 href="https://github.com/nckhrdy/NFCScooterFob"
                 target="_blank"
@@ -179,8 +176,7 @@ const Project3: React.FC = () => {
               >
                 Project GitHub
               </a>
-              <br />
-              <br />
+              <br /><br />
               <div className="w-full h-64 relative mb-8">
                 <Image
                   src="/assets/Proj3Arch.png"
