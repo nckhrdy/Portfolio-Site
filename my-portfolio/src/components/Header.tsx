@@ -10,23 +10,20 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const navigate = (path) => {
+  const navigate = (path: string) => {
     if (path.startsWith('#') && router.pathname === '/') {
-      // If on the homepage and navigating to a hash, use the browser's native behavior
-      const element = document.querySelector(path);
+      const element = document.querySelector(path) as HTMLElement; // Type assertion to HTMLElement
       if (element) {
         window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
       }
     } else if (path.startsWith('#')) {
-      // If not on the homepage but navigating to a hash, push to homepage then scroll
       router.push('/').then(() => setTimeout(() => {
-        const element = document.querySelector(path);
+        const element = document.querySelector(path) as HTMLElement; // Type assertion to HTMLElement
         if (element) {
           window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
         }
       }, 100));
     } else {
-      // For all other routes, use Next.js router
       router.push(path);
     }
 
