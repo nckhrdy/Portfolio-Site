@@ -67,10 +67,10 @@ const Project4: React.FC = () => {
               <br />
               In this project, we embarked on creating a remote-controlled car
               designed to navigate through a rally race course marked by several
-              checkpoints. The core objective was to log the car's time and
+              checkpoints. The core objective was to log the car&apos;s time and
               distance as it progressed, ensuring it reached the finish line
               efficiently. Central to this endeavor was the development of a web
-              interface that allowed for precise control over the car's
+              interface that allowed for precise control over the car&apos;s
               steering, speed, and braking mechanisms. Key to our approach was
               the integration of range sensors for collision avoidance, a PID
               controller for consistent speed maintenance, and the innovative

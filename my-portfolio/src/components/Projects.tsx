@@ -38,18 +38,18 @@ const Projects: React.FC = () => {
         href: '/Project6',
         title: 'This website!',
         description: 'My personal portfolio website',
-        imageUrl: '/assets/Website.png', 
+        imageUrl: '/assets/PortfolioHomePage.png', 
       },
   ];
 
   return (
     <div style={{ position: "relative", background: "#ffffff" }}>
-      <main className="grid grid-cols-3 grid-rows-2 gap-4 p-4 pt-20">
+      <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 pt-20">
         {projectLinks.map((project, index) => (
           <Link key={index} href={project.href} passHref>
             <div className="cursor-pointer">
-              <div className="bg-white hover:bg-gray-100 rounded-lg shadow-lg p-4 md:p-6 transition-colors duration-300">
-                <div className="w-full h-40 relative mb-3">
+              <div className="bg-white hover:bg-gray-100 rounded-lg shadow-lg p-4 md:p-6 transition-colors duration-300 flex flex-col justify-between" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+                <div style={{ paddingBottom: '56.25%', position: 'relative', width: '100%', marginBottom: '1rem' }}>
                   <Image
                     src={project.imageUrl}
                     alt={project.title}
@@ -57,8 +57,10 @@ const Projects: React.FC = () => {
                     objectFit="cover"
                   />
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold">{project.title}</h3>
-                <p className="mt-2 text-md md:text-lg">{project.description}</p>
+                <div>
+                  <h3 className="text-xl md:text-2xl font-bold">{project.title}</h3>
+                  <p className="mt-2 text-md md:text-lg">{project.description}</p>
+                </div>
               </div>
             </div>
           </Link>

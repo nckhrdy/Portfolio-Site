@@ -66,8 +66,8 @@ const Project2: React.FC = () => {
               The Autonomous Buggy project aimed to develop a self-driving
               buggy capable of navigating a course autonomously. The project
               involved the integration of sensors, actuators, and control
-              systems to facilitate the buggy's autonomous operation. The
-              project's primary objective was to design a system that could
+              systems to facilitate the buggy&apos;s autonomous operation. The
+              project&apos;s primary objective was to design a system that could
               navigate a course while avoiding obstacles and maintaining a
               safe distance from them.
             </div>

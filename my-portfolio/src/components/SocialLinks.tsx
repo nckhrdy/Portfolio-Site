@@ -3,8 +3,8 @@ import React from 'react';
 const socialLinks = [
   { src: '/assets/LinkedIn.svg', alt: 'LinkedIn', href: 'https://www.linkedin.com/in/hardy-nicholas', text: 'LinkedIn'},
   { src: '/assets/GitHub.svg', alt: 'GitHub', href: 'https://github.com/nckhrdy', text: 'GitHub' },
-  { src: '/assets/Green.svg', alt: 'Green', href: '/assets/Resume NH 2024.pdf', text: 'Resume' },
-  { src: '/assets/Email.svg', alt: 'Email', href: 'mailto:nckhrdy@bu.edu', text: '' },
+  { src: '/assets/Green.svg', alt: 'Green', href: '/assets/Resume NH v1.0.pdf', text: 'Resume' },
+  { src: '/assets/email.svg', alt: 'Email', href: 'mailto:nckhrdy@bu.edu', text: '' },
 ];
 
 const SocialLinks: React.FC = () => {
