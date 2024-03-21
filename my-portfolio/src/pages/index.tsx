@@ -21,6 +21,7 @@ const Home: React.FC = () => {
       
       <div className="relative min-h-screen" style={{ background: "#ffffff" }}>
         <main className="grid grid-cols-6 grid-rows-6 h-screen">
+          <Analytics />
           <Arrows />
           <TextStatements />
           <SocialLinks />
