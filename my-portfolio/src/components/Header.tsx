@@ -6,19 +6,17 @@ const Header = () => {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const navigate = (path: string) => {
     if (path.startsWith('#') && router.pathname === '/') {
-      const element = document.querySelector(path) as HTMLElement; // Type assertion to HTMLElement
+      const element = document.querySelector(path) as HTMLElement;
       if (element) {
         window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
       }
     } else if (path.startsWith('#')) {
       router.push('/').then(() => setTimeout(() => {
-        const element = document.querySelector(path) as HTMLElement; // Type assertion to HTMLElement
+        const element = document.querySelector(path) as HTMLElement;
         if (element) {
           window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
         }
@@ -27,7 +25,7 @@ const Header = () => {
       router.push(path);
     }
 
-    toggleMenu(); // Close menu after navigating
+    toggleMenu();
   };
 
   return (
@@ -38,12 +36,16 @@ const Header = () => {
         </div>
         <div className="md:hidden">
           <button onClick={toggleMenu}>
-            {/* Hamburger Icon SVG */}
+            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
           </button>
         </div>
         <div className={`${isMenuOpen ? "fixed inset-0 bg-white bg-opacity-95 z-50 flex flex-col items-center justify-center" : "hidden"} md:flex md:flex-row md:relative md:bg-transparent md:items-center md:justify-between`}>
           <button className="absolute top-5 right-5 md:hidden" onClick={toggleMenu}>
-            {/* Close Icon SVG */}
+            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
           </button>
           {['/', '#about', '#projects', '#contact'].map((path, index) => (
             <div key={index} onClick={() => navigate(path)} className="p-4 cursor-pointer font-semibold text-lg" style={{ fontFamily: "'DocumanSTC', serif", color: textColor }}>
