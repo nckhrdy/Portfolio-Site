@@ -66,7 +66,7 @@ const Project5: React.FC = () => {
               For this project, we were tasked with designing and testing a mechanical only Sono Buoy prototype. We had to perform a Stress Analysis, Material Selection, Cost Analysis and accurate engineering drawings. The final report was submitted as a PDF (attatched below) and the prototype was tested in that class. 
               <br />
               <br />
-              This was a valuable experience for me as I was able to work with a team of mechanical engineers and learn about the design process from a different perspective. 
+              This was a valuable experience for me as I was able to work with a team of mechanical engineers and learn about the design process from a different perspective.
             </p>
             {/* Embedding PDF Viewer Here */}
             <div className="overflow-auto" style={{ height: '500px' }}>

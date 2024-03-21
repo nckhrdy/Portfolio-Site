@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRouter } from 'next/router';
 import Header from "../../components/Header";
 
-const Project1: React.FC = () => {
+const Project6: React.FC = () => {
   const textColor = "#575454";
   const router = useRouter();
 
@@ -59,7 +59,9 @@ const Project1: React.FC = () => {
               <br /><br />
               This website is still a work in progress and I will be adding more projects and features in the future.
               <br /><br />
-              I am a busy student juggling many responsibilities, so I appreciate your patience and understanding. :)
+              I appreciate your patience and understanding :)
+              <br />
+              <br />
             </p>
             <a
                 href="https://github.com/nckhrdy/Portfolio-Site/tree/main"
@@ -67,7 +69,7 @@ const Project1: React.FC = () => {
                 rel="noopener noreferrer"
                 style={{ textDecoration: "underline" }}
               >
-                Project GitHub
+              Project GitHub
               </a>
           </div>
         </div>
@@ -76,4 +78,4 @@ const Project1: React.FC = () => {
   );
 };
 
-export default Project1;
+export default Project6;
