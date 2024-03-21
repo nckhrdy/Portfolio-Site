@@ -67,7 +67,7 @@ const Project1: React.FC = () => {
               <br /><br />
               This project is still in the early stages of development as we have just finished our first prototype. We are currently working on improving the latency of the speech-to-text API and the overall design of the glasses.
               <br /><br />
-              More updates to come soon!
+              APRIL 2024 RELEASE DATE - STAY TUNED!
             </p>
           </div>
         </div>
