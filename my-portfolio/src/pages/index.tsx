@@ -16,7 +16,7 @@ const Home: React.FC = () => {
         <title>Nick Hardy Portfolio</title>
         <meta name="description" content="Welcome to my portfolio" />
       </Head>
-
+      <Analytics />
       <Header /> {/* Add the Header here */}
       
       <div className="relative min-h-screen" style={{ background: "#ffffff" }}>
