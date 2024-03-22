@@ -7,6 +7,8 @@ import About from "../components/About";
 import Projects from "../components/Projects";
 import Header from "../components/Header";
 import Contact from "../components/Contact"// Import the Header component
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const Home: React.FC = () => {
   return (
@@ -15,11 +17,13 @@ const Home: React.FC = () => {
         <title>Nick Hardy Portfolio</title>
         <meta name="description" content="Welcome to my portfolio" />
       </Head>
-
+      <Analytics />
       <Header /> {/* Add the Header here */}
       
       <div className="relative min-h-screen" style={{ background: "#ffffff" }}>
         <main className="grid grid-cols-6 grid-rows-6 h-screen">
+          <Analytics />
+          <SpeedInsights />
           <Arrows />
           <TextStatements />
           <SocialLinks />
