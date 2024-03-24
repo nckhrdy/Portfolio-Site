@@ -48,7 +48,7 @@ const Projects: React.FC = () => {
         {projectLinks.map((project, index) => (
           <Link key={index} href={project.href} passHref>
             <div className="cursor-pointer">
-              <div className="bg-white hover:bg-gray-100 rounded-lg shadow-lg p-4 md:p-6 transition-colors duration-300 flex flex-col justify-between" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+              <div className="bg-white hover:bg-red-800 rounded-lg shadow-lg p-4 md:p-6 transition-colors duration-300 flex flex-col justify-between" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                 <div style={{ paddingBottom: '56.25%', position: 'relative', width: '100%', marginBottom: '1rem' }}>
                   <Image
                     src={project.imageUrl}

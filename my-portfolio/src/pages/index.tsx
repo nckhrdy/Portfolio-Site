@@ -16,6 +16,7 @@ const Home: React.FC = () => {
       <Head>
         <title>Nicholas Hardy Portfolio</title>
         <meta name="description" content="Welcome to my portfolio" />
+        <link rel="icon" href="./assets/favicon.ico" />
       </Head>
       <Analytics />
       <Header /> {/* Add the Header here */}

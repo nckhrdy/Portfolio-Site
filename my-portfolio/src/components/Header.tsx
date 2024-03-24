@@ -47,7 +47,7 @@ const Header = () => {
             </svg>
           </button>
           {['/', '#about', '#projects', '#contact'].map((path, index) => (
-            <div key={index} onClick={() => navigate(path)} className="p-4 cursor-pointer font-semibold text-lg hover:text-red-600 transition-colors duration-200" style={{ fontFamily: "'DocumanSTC', serif" }}>
+            <div key={index} onClick={() => navigate(path)} className="p-4 cursor-pointer font-semibold text-lg hover:text-red-800 transition-colors duration-200" style={{ fontFamily: "'DocumanSTC', serif" }}>
               {path === '/' ? 'Home' : path.substring(1).charAt(0).toUpperCase() + path.substring(2)}
             </div>
           ))}

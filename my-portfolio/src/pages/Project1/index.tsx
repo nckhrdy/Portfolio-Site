@@ -13,6 +13,7 @@ const Project1: React.FC = () => {
       <Head>
         <title>EchoView.ai - Project 1</title>
         <meta name="description" content="Project 1 description" />
+        <link rel="icon" href="./assets/favicon.ico" />
       </Head>
       <Header />
       <div
@@ -23,7 +24,7 @@ const Project1: React.FC = () => {
           {/* Back button */}
           <button
             onClick={() => router.push('/#projects')} 
-            className="mb-4 text-gray-600 hover:text-red-600 transition duration-300 ease-in-out"
+            className="mb-4 text-gray-600 hover:text-red-800 transition duration-300 ease-in-out"
             style={{ fontFamily: "'Nunito', serif" }}
           >
             &larr; Back

@@ -13,6 +13,7 @@ const Project5: React.FC = () => {
       <Head>
         <title>Sono Buoy Design - Project 5</title>
         <meta name="description" content="Project 5 description" />
+        <link rel="icon" href="./assets/favicon.ico" />
       </Head>
       <Header />
       <div
@@ -23,7 +24,7 @@ const Project5: React.FC = () => {
           {/* Back button */}
           <button
             onClick={() => router.push('/#projects')}
-            className="mb-4 text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out"
+            className="mb-4 text-gray-600 hover:text-red-800 transition duration-300 ease-in-out"
             style={{ fontFamily: "'Nunito', serif" }}
           >
             &larr; Back
