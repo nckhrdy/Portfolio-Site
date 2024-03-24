@@ -23,9 +23,9 @@ const Project2: React.FC = () => {
         <div className="max-w-4xl mx-auto p-5">
           {/* Back button */}
           <button
-            onClick={() => router.back()}
-            className="mb-4 text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out"
-            style={{ fontFamily: "'Nunito', sans-serif" }}
+            onClick={() => router.push('/#projects')} 
+            className="mb-4 text-gray-600 hover:text-red-600 transition duration-300 ease-in-out"
+            style={{ fontFamily: "'Nunito', serif" }}
           >
             &larr; Back
           </button>

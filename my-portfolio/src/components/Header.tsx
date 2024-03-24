@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 
 const Header = () => {
-  const textColor = '#575454';
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -31,7 +30,7 @@ const Header = () => {
   return (
     <nav className="p-4 fixed top-0 left-0 right-0 z-50 bg-white w-full">
       <div className="container mx-auto flex justify-between items-center">
-        <div onClick={() => navigate('/')} className="text-xl font-semibold cursor-pointer" style={{ fontFamily: "'DocumanSTC', serif", color: textColor }}>
+        <div onClick={() => navigate('/')} className="text-xl font-semibold cursor-pointer hover:text-gray-800 transition-colors duration-200" style={{ fontFamily: "'DocumanSTC', serif" }}>
           Nicholas Hardy Portfolio
         </div>
         <div className="md:hidden">
@@ -48,7 +47,7 @@ const Header = () => {
             </svg>
           </button>
           {['/', '#about', '#projects', '#contact'].map((path, index) => (
-            <div key={index} onClick={() => navigate(path)} className="p-4 cursor-pointer font-semibold text-lg" style={{ fontFamily: "'DocumanSTC', serif", color: textColor }}>
+            <div key={index} onClick={() => navigate(path)} className="p-4 cursor-pointer font-semibold text-lg hover:text-red-600 transition-colors duration-200" style={{ fontFamily: "'DocumanSTC', serif" }}>
               {path === '/' ? 'Home' : path.substring(1).charAt(0).toUpperCase() + path.substring(2)}
             </div>
           ))}

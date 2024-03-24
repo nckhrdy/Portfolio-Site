@@ -22,9 +22,9 @@ const Project5: React.FC = () => {
         <div className="max-w-4xl mx-auto p-5">
           {/* Back button */}
           <button
-            onClick={() => router.back()}
+            onClick={() => router.push('/#projects')}
             className="mb-4 text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out"
-            style={{ fontFamily: "'Nunito', sans-serif" }}
+            style={{ fontFamily: "'Nunito', serif" }}
           >
             &larr; Back
           </button>
@@ -60,7 +60,7 @@ const Project5: React.FC = () => {
               Collaborators: Nicholas Hardy, Jake Hyman, Ruian Luo, Brian Chau, Raka Ridianto
               <br />
               <br />
-              Date: 2023-10-28 (University of Sydney Mechanical Design Course)
+              Date: 2022-10-28 (University of Sydney Mechanical Design Course)
               <br />
               <br />
               For this project, we were tasked with designing and testing a mechanical only Sono Buoy prototype. We had to perform a Stress Analysis, Material Selection, Cost Analysis and accurate engineering drawings. The final report was submitted as a PDF (attatched below) and the prototype was tested in that class. 
@@ -68,8 +68,14 @@ const Project5: React.FC = () => {
               <br />
               This was a valuable experience for me as I was able to work with a team of mechanical engineers and learn about the design process from a different perspective.
             </p>
+            <h2
+              className="text-2xl font-semibold text-center mb-4"
+              style={{ color: textColor }}
+            >
+              Project Submission
+            </h2>
             {/* Embedding PDF Viewer Here */}
-            <div className="overflow-auto" style={{ height: '500px' }}>
+            <div className="overflow-auto" style={{ fontFamily: "'Nunito', serif", height: '500px' }}>
               <object data="/assets/USyd SonoBuoy Group5.pdf" type="application/pdf" width="100%" style={{ minHeight: '500px' }}>
                 <p>Your browser does not support PDFs. Please download the PDF to view it: <a href="/assets/USyd SonoBuoy Group5.pdf">Download PDF</a>.</p>
               </object>
