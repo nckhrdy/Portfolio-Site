@@ -48,8 +48,8 @@ const Project6: React.FC = () => {
             />
           </div>
           <div className="bg-white shadow-md rounded-lg p-6">
-            <h2
-              className="text-2xl font-semibold mb-4"
+          <h2
+              className="text-2xl font-semibold text-center mb-4"
               style={{ color: textColor }}
             >
               Project Overview
