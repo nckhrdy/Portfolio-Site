@@ -18,7 +18,7 @@ const About: React.FC = () => {
         <div className="flex justify-center items-center px-4 lg:px-20 py-4">
           <div className="bg-white bg-opacity-90 shadow-lg p-4 lg:p-6 max-w-3xl w-full rounded-lg" style={{ margin: "0 auto" }}>
             <p className="text-lg lg:text-2xl xl:text-3xl font-normal" style={{ fontFamily: "'Nunito', serif", color: "#000000", lineHeight: "1.6" }}>
-              I&apos;m a recent 2024 Computer Engineering graduate from Boston University and my biggest passion is innovation. My interests began with robotics from an early age and that has since evolved into a love for software development and entrepreneurship. Recently, many of my projects have involved combining embedded systems with web apps, mobile appls and machine learning. This has enabled me to quickly turn ideas to prototypes and then into practical solutions. I&apos;m excited to see where my journey takes me as I aim to bridge the gaps between technology and business solutions.
+              I&apos;m a recent 2024 Computer Engineering graduate from Boston University and my biggest passion is innovation. My interests began with robotics from an early age and that has since evolved into a love for software development and entrepreneurship. Recently, many of my projects have involved combining embedded systems with web apps, mobile apps and machine learning. This has enabled me to quickly turn ideas to prototypes and then into practical solutions. I&apos;m excited to see where my journey takes me as I aim to bridge the gaps between technology and business solutions.
             </p>
           </div>
         </div>
