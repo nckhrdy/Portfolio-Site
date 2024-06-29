@@ -212,7 +212,7 @@ const Project1: React.FC = () => {
             className="text-4xl font-bold text-center mb-6"
             style={{ color: textColor }}
           >
-            EchoView.ai TEST
+            EchoView.ai
           </h1>
           <p className="text-lg mb-4 text-center" style={{ color: textColor }}>
             Augmented Reality for the Deaf Community
