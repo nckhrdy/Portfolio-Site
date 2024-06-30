@@ -56,7 +56,7 @@ const Project6: React.FC = () => {
             </h2>
             <p className="text-gray-600 pl-4 block"
               style={{ fontFamily: "'Nunito', sans-serif" }}>
-              As a personal project, I wanted to demostrate a self taught skillset in web development. I built this website using Next.js, Tailwind CSS, and TypeScript and it is deployed using Vercel. I hope you enjoy the website and find it easy to navigate. If you have any feedback, feel free to reach out to me.
+              As a personal project, I wanted to demonstrate a self taught skillset in web development. I built this website using Next.js, Tailwind CSS, and TypeScript and it is deployed using Vercel. I hope you enjoy the website and find it easy to navigate. If you have any feedback, feel free to reach out to me.
               <br /><br />
               This website is still a work in progress and I will be adding more projects and features in the future.
               <br /><br />
