@@ -25,7 +25,7 @@ const Projects: React.FC = () => {
       {
         href: '/Project4',
         title: 'WiFi FPV Buggy',
-        description: 'WiFi controlled FPV Buggy with Live Video Feed',
+        description: 'WiFi controlled FPV Buggy with Live Video',
         imageUrl: '/assets/FPV.png', 
       },
       {
@@ -44,6 +44,14 @@ const Projects: React.FC = () => {
 
   return (
     <div style={{ position: "relative", background: "#ffffff" }}>
+      <div className="lg:col-span-2 flex justify-center items-center px-20 py-2 text-center">
+          <p
+            className="text-2xl lg:text-3xl font-bold"
+            style={{ fontFamily: "'DocumanSTC', serif", color: "#000000" }}
+          >
+            Projects
+          </p>
+        </div>
       <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 pt-20">
         {projectLinks.map((project, index) => (
           <Link key={index} href={project.href} passHref>
