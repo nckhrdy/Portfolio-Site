@@ -38,7 +38,7 @@ const Project1: React.FC = () => {
           <p className="text-lg mb-4 text-center" style={{ color: textColor }}>
             Augmented Reality for the Deaf Community
           </p>
-          <div className="w-full h-64 relative mb-8">
+          <div className="w-full h-64 relative mb-8 group">
             <Image
               src="/assets/Echo.png"
               alt="Project Image"
@@ -46,6 +46,9 @@ const Project1: React.FC = () => {
               objectFit="cover"
               className="rounded-lg"
             />
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span className="text-white text-2xl font-bold">Award Winner</span>
+            </div>
           </div>
           <div className="bg-white shadow-md rounded-lg p-6">
             <h2

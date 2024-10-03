@@ -1,43 +1,60 @@
 /* Add this to your global.css */
-@font-face {
-  font-family: 'DocumanSTC';
-  src: url('/fonts/DocumanSTC-Medium.otf') format('opentype'),
-       url('/fonts/DocumanSTC-Medium.ttf') format('truetype'),
-       url('/fonts/DocumanSTC-Medium.woff') format('woff'),
-       url('/fonts/DocumanSTC-Medium.woff2') format('woff2');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Thin version */
-@font-face {
-  font-family: 'DocumanSTC';
-  src: url('/fonts/DocumanSTC-Thin.otf') format('opentype'),
-       url('/fonts/DocumanSTC-Thin.ttf') format('truetype'),
-       url('/fonts/DocumanSTC-Thin.woff') format('woff'),
-       url('/fonts/DocumanSTC-Thin.woff2') format('woff2');
-  font-weight: 100; /* or the correct weight for the thin version */
-  font-style: normal;
-  font-display: swap;
-}
 /* Existing imports and Tailwind directives */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Use your custom font family wherever you need it */
-body {
-  font-family: 'DocumanSTC', 'Nunito', serif;
+@layer base {
+  html {
+    font-family: 'Roboto Flex', sans-serif;
+  }
+
+  body {
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+  }
 }
 
-.thin-text {
-  font-family: 'DocumanSTC', sans-serif;
-  font-weight: 100;
+/* Your existing font weight utility classes can remain as they are */
+.font-extralight {
+  font-weight: 200;
 }
 
-.bold-text {
-  font-family: 'DocumanSTC', sans-serif;
-  font-weight: bold;
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Flex', sans-serif;
+  font-weight: 700;
 }

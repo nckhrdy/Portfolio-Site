@@ -5,12 +5,12 @@ const About: React.FC = () => {
     {
       category: "Programming",
       items:
-        "C/C++/C#, Python, JavaScript, TypeScript, Swift, HTML/CSS, MATLAB, Verilog",
+        "C/C#/C++, Swift, Python, JavaScript, TypeScript, HTML/CSS, MATLAB",
     },
     {
       category: "Development Tools",
       items:
-        "Git, Node.js, React, Firebase, MongoDB, Next.js, TailwindCSS, Jest, various microcontrollers and sensors",
+        "Git, Node, React, Next, Firebase, MongoDB, Jest, Various microcontrollers, Pytorch",
     },
     {
       category: "Design & Modeling",
@@ -40,10 +40,7 @@ const About: React.FC = () => {
       <main className="grid grid-cols-1 lg:grid-cols-2 gap-4 p-4 min-h-screen">
         {/* Title centered above both columns in all sizes */}
         <div className="lg:col-span-2 flex justify-center items-center px-20 py-4 text-center">
-          <p
-            className="text-3xl lg:text-4xl font-bold"
-            style={{ fontFamily: "'DocumanSTC', serif", color: "#000000" }}
-          >
+          <p className="text-3xl lg:text-4xl" style={{ fontVariationSettings: "'wdth' 125, 'wght' 900", color: "#000000" }}>
             So! Who am I?
           </p>
         </div>
@@ -57,18 +54,8 @@ const About: React.FC = () => {
         </div>
         {/* Text content section, stays next to the image until the smallest window size */}
         <div className="flex justify-center items-center px-4 lg:px-20 py-4">
-          <div
-            className="bg-white bg-opacity-90 shadow-lg p-4 lg:p-6 max-w-3xl w-full rounded-lg"
-            style={{ margin: "0 auto" }}
-          >
-            <p
-              className="text-lg lg:text-2xl xl:text-3xl font-normal"
-              style={{
-                fontFamily: "'Nunito', serif",
-                color: "#000000",
-                lineHeight: "1.6",
-              }}
-            >
+          <div className="bg-white bg-opacity-90 shadow-lg p-4 lg:p-6 max-w-3xl w-full rounded-lg" style={{ margin: "0 auto" }}>
+            <p className="text-lg lg:text-2xl xl:text-3xl" style={{ fontVariationSettings: "'wdth' 100, 'wght' 400", color: "#000000", lineHeight: "1.6" }}>
               I&apos;m a recent 2024 Computer Engineering graduate from Boston
               University and my biggest passion is innovation. My interests
               began with robotics from an early age and that has since evolved
@@ -84,34 +71,18 @@ const About: React.FC = () => {
         </div>
         {/* Skills Section */}
         <div className="lg:col-span-2 flex justify-center items-center px-20 py-2 text-center">
-          <p
-            className="text-2xl lg:text-3xl font-bold"
-            style={{ fontFamily: "'DocumanSTC', serif", color: "#000000" }}
-          >
+          <p className="text-2xl lg:text-3xl" style={{ fontVariationSettings: "'wdth' 125, 'wght' 900", color: "#000000" }}>
             Skills
           </p>
         </div>
         <div className="lg:col-span-2 flex justify-center items-center px-4 lg:px-20 py-2">
-          <div
-            className="bg-white bg-opacity-90 shadow-lg p-4 lg:p-6 max-w-3xl w-full rounded-lg"
-            style={{ margin: "0 auto" }}
-          >
+          <div className="bg-white bg-opacity-90 shadow-lg p-4 lg:p-6 max-w-3xl w-full rounded-lg" style={{ margin: "0 auto" }}>
             {skills.map((skill) => (
               <div key={skill.category} className="mb-2">
-                <p
-                  className="font-semibold text-base lg:text-lg xl:text-xl"
-                  style={{ fontFamily: "'Nunito', serif", color: "#000000" }}
-                >
+                <p className="font-bold text-base lg:text-lg xl:text-xl" style={{ color: "#000000" }}>
                   {skill.category}:
                 </p>
-                <p
-                  className="text-gray-700 text-base lg:text-lg xl:text-xl"
-                  style={{
-                    fontFamily: "'Nunito', serif",
-                    color: "#000000",
-                    lineHeight: "1.4",
-                  }}
-                >
+                <p className="text-gray-700 text-base lg:text-lg xl:text-xl" style={{ color: "#000000", lineHeight: "1.4" }}>
                   {skill.items}
                 </p>
               </div>
@@ -120,18 +91,12 @@ const About: React.FC = () => {
         </div>
         {/* Awards Section */}
         <div className="lg:col-span-2 flex justify-center items-center px-20 py-2 text-center">
-          <p
-            className="text-2xl lg:text-3xl font-bold"
-            style={{ fontFamily: "'DocumanSTC', serif", color: "#000000" }}
-          >
+          <p className="text-2xl lg:text-3xl" style={{ fontVariationSettings: "'wdth' 125, 'wght' 900", color: "#000000" }}>
             Awards
           </p>
         </div>
         <div className="lg:col-span-2 flex justify-center items-center px-4 lg:px-20 py-2">
-          <div
-            className="bg-white bg-opacity-90 shadow-lg p-4 lg:p-6 max-w-3xl w-full rounded-lg"
-            style={{ margin: "0 auto" }}
-          >
+          <div className="bg-white bg-opacity-90 shadow-lg p-4 lg:p-6 max-w-3xl w-full rounded-lg" style={{ margin: "0 auto" }}>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2">
               {awards.map((award) => (
                 <div key={award.alt} className="flex flex-col items-center">
@@ -141,10 +106,7 @@ const About: React.FC = () => {
                     className="rounded-lg mb-2"
                     style={{ maxWidth: "100%", height: "auto" }}
                   />
-                  <p
-                    className="text-sm lg:text-base xl:text-lg"
-                    style={{ fontFamily: "'Nunito', serif", color: "#000000" }}
-                  >
+                  <p className="text-sm lg:text-base xl:text-lg" style={{ color: "#000000" }}>
                     {award.description}
                   </p>
                 </div>
