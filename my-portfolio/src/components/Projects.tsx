@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image'; // Import if using Next.js Image component
+import Image from 'next/image';
 
 const Projects: React.FC = () => {
   const projectLinks = [
@@ -53,17 +53,17 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <div style={{ position: "relative", background: "#ffffff" }}>
+    <div className="relative bg-background">
       <div className="lg:col-span-2 flex justify-center items-center px-20 py-2 text-center">
-        <p className="text-2xl lg:text-3xl" style={{ fontVariationSettings: "'wdth' 125, 'wght' 900", color: "#000000" }}>
+        <h2 className="text-2xl lg:text-3xl font-bold">
           Projects
-        </p>
+        </h2>
       </div>
-      <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 pt-20">
+      <main className="retro-grid p-4 pt-20">
         {projectLinks.map((project, index) => (
           <Link key={index} href={project.href} passHref>
             <div className="cursor-pointer">
-              <div className="bg-white hover:bg-red-800 rounded-lg shadow-lg p-4 md:p-6 transition-colors duration-300 flex flex-col justify-between" style={{ height: '100%' }}>
+              <div className="retro-card rounded-lg p-4 md:p-6 flex flex-col justify-between h-full">
                 <div className="relative" style={{ paddingBottom: '56.25%', width: '100%', marginBottom: '1rem' }}>
                   <Image
                     src={project.imageUrl}
@@ -73,15 +73,15 @@ const Projects: React.FC = () => {
                     className="rounded-t-lg"
                   />
                   {project.isAwardWinner && (
-                    <div className="absolute top-0 right-0 bg-yellow-400 text-black px-2 py-1 m-2 rounded-full text-sm font-bold">
+                    <div className="absolute top-0 right-0 bg-yellow-500 text-black px-2 py-1 m-2 rounded-full text-sm font-bold">
                       Award Winner
                     </div>
                   )}
                 </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl" style={{ fontVariationSettings: "'wdth' 110, 'wght' 700" }}>{project.title}</h3>
-                  <p className="mt-2 text-md md:text-lg" style={{ fontVariationSettings: "'wdth' 100, 'wght' 400" }}>{project.description}</p>
-                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mt-2" style={{ fontVariationSettings: "'wdth' 100, 'wght' 600" }}>
+                  <h3 className="text-xl md:text-2xl font-bold">{project.title}</h3>
+                  <p className="mt-2 text-md md:text-lg">{project.description}</p>
+                  <span className="inline-block bg-white rounded-full px-3 py-1 text-sm font-semibold mt-2">
                     {project.category}
                   </span>
                 </div>

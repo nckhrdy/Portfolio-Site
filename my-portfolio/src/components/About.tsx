@@ -38,24 +38,21 @@ const About: React.FC = () => {
   return (
     <div className="relative">
       <main className="grid grid-cols-1 lg:grid-cols-2 gap-4 p-4 min-h-screen">
-        {/* Title centered above both columns in all sizes */}
         <div className="lg:col-span-2 flex justify-center items-center px-20 py-4 text-center">
-          <p className="text-3xl lg:text-4xl" style={{ fontVariationSettings: "'wdth' 125, 'wght' 900", color: "#000000" }}>
+          <h2 className="text-3xl lg:text-4xl font-bold">
             So! Who am I?
-          </p>
+          </h2>
         </div>
-        {/* Image section, stays next to the text until the smallest window size */}
         <div className="flex justify-center items-center px-4 lg:px-20 py-4">
           <img
             src="/assets/aboutme.svg"
             alt="About Me"
-            style={{ maxWidth: "100%", height: "auto" }}
+            className="max-w-full h-auto"
           />
         </div>
-        {/* Text content section, stays next to the image until the smallest window size */}
         <div className="flex justify-center items-center px-4 lg:px-20 py-4">
-          <div className="bg-white bg-opacity-90 shadow-lg p-4 lg:p-6 max-w-3xl w-full rounded-lg" style={{ margin: "0 auto" }}>
-            <p className="text-lg lg:text-2xl xl:text-3xl" style={{ fontVariationSettings: "'wdth' 100, 'wght' 400", color: "#000000", lineHeight: "1.6" }}>
+          <div className="retro-card p-4 lg:p-6 max-w-3xl w-full rounded-lg">
+            <p className="text-lg lg:text-2xl xl:text-3xl" style={{ lineHeight: "1.6" }}>
               I&apos;m a recent 2024 Computer Engineering graduate from Boston
               University and my biggest passion is innovation. My interests
               began with robotics from an early age and that has since evolved
@@ -69,44 +66,43 @@ const About: React.FC = () => {
             </p>
           </div>
         </div>
-        {/* Skills Section */}
         <div className="lg:col-span-2 flex justify-center items-center px-20 py-2 text-center">
-          <p className="text-2xl lg:text-3xl" style={{ fontVariationSettings: "'wdth' 125, 'wght' 900", color: "#000000" }}>
+          <h2 className="text-2xl lg:text-3xl font-bold">
             Skills
-          </p>
+          </h2>
         </div>
         <div className="lg:col-span-2 flex justify-center items-center px-4 lg:px-20 py-2">
-          <div className="bg-white bg-opacity-90 shadow-lg p-4 lg:p-6 max-w-3xl w-full rounded-lg" style={{ margin: "0 auto" }}>
-            {skills.map((skill) => (
-              <div key={skill.category} className="mb-2">
-                <p className="font-bold text-base lg:text-lg xl:text-xl" style={{ color: "#000000" }}>
-                  {skill.category}:
-                </p>
-                <p className="text-gray-700 text-base lg:text-lg xl:text-xl" style={{ color: "#000000", lineHeight: "1.4" }}>
-                  {skill.items}
-                </p>
-              </div>
-            ))}
+          <div className="retro-card p-4 lg:p-6 max-w-3xl w-full rounded-lg">
+            <div className="retro-grid">
+              {skills.map((skill) => (
+                <div key={skill.category} className="mb-2">
+                  <h3 className="font-bold text-base lg:text-lg xl:text-xl">
+                    {skill.category}:
+                  </h3>
+                  <p className="text-base lg:text-lg xl:text-xl" style={{ lineHeight: "1.4" }}>
+                    {skill.items}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-        {/* Awards Section */}
         <div className="lg:col-span-2 flex justify-center items-center px-20 py-2 text-center">
-          <p className="text-2xl lg:text-3xl" style={{ fontVariationSettings: "'wdth' 125, 'wght' 900", color: "#000000" }}>
+          <h2 className="text-2xl lg:text-3xl font-bold">
             Awards
-          </p>
+          </h2>
         </div>
         <div className="lg:col-span-2 flex justify-center items-center px-4 lg:px-20 py-2">
-          <div className="bg-white bg-opacity-90 shadow-lg p-4 lg:p-6 max-w-3xl w-full rounded-lg" style={{ margin: "0 auto" }}>
+          <div className="retro-card bg-white bg-opacity-90 p-4 lg:p-6 max-w-3xl w-full rounded-lg">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2">
               {awards.map((award) => (
-                <div key={award.alt} className="flex flex-col items-center">
+                <div key={award.alt} className="flex flex-col items-center hover-effect">
                   <img
                     src={award.src}
                     alt={award.alt}
-                    className="rounded-lg mb-2"
-                    style={{ maxWidth: "100%", height: "auto" }}
+                    className="rounded-lg mb-2 max-w-full h-auto"
                   />
-                  <p className="text-sm lg:text-base xl:text-lg" style={{ color: "#000000" }}>
+                  <p className="text-sm lg:text-base xl:text-lg" style={{ color: 'var(--accent)' }}>
                     {award.description}
                   </p>
                 </div>
